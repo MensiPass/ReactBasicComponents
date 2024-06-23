@@ -2,6 +2,7 @@ import Alert from "./Components/Alert";
 import Button from "./Components/Button";
 import ListGroup from "./Components/ListGroup";
 import Accordion from "./Components/Accordion";
+import DropDown from "./Components/DropDown";
 import { useState } from "react";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         </Alert>
       )}
       <Accordion accitems={accitems} headings={headings}></Accordion>
+      <DropDown accitems={accitems}></DropDown>
       <Button onClick={() => setAlertVisibility(true)}>My button</Button>
     </>
   );
