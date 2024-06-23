@@ -8,8 +8,16 @@ function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
 
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-  let accitems = ["text one", "text two"];
-  let headings = ["One acc headding", "Two acc headding"];
+  let accitems = [
+    "Accordion one text",
+    "Accordion two text",
+    "Accordion three text",
+  ];
+  let headings = [
+    "Accordion one heading",
+    "Accordion two heading",
+    "Accordion three heading",
+  ];
   const handleSelectItem = (item: string) => {
     console.log(item);
   };
