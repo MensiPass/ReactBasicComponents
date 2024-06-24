@@ -4,6 +4,7 @@ import ListGroup from "./Components/ListGroup";
 import Accordion from "./Components/Accordion";
 import DropDown from "./Components/DropDown";
 import ImageSlider from "./Components/ImageSlider";
+import PillTabs from "./Components/PillTabs";
 import { useState } from "react";
 
 function App() {
@@ -16,6 +17,13 @@ function App() {
   let imgitems = [
     "https://plus.unsplash.com/premium_photo-1667862241971-e1f08f51dd07?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1633164442172-dc4147f21954?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
+
+  let tabtitles = ["Tab title No. 1", "Tab title No. 2", "Tab title No. 3"];
+  let tabcontents = [
+    "Tab content No. 1",
+    "Tab content No. 2",
+    "Tab content No. 3",
   ];
   const handleSelectItem = (item: string) => {
     console.log(item);
@@ -53,22 +61,26 @@ function App() {
           </div>
 
           <div className="col mx-auto p-2 text-center">
-            <h3>Accordion Component</h3>
+            <h4>Accordion Component</h4>
             <Accordion accitems={accitems} headings={headings}></Accordion>
           </div>
         </div>
 
         <div className="row">
           <div className="col  mx-auto p-2 text-center">
-            <h3>DropDown Component</h3>
+            <h4>DropDown Component</h4>
             <DropDown accitems={drpitems}></DropDown>
           </div>
           <div className="col mx-auto p-2 text-center">
-            <h3>Image Carousel Component</h3>
+            <h4>Image Carousel Component</h4>
             <ImageSlider imgitems={imgitems}></ImageSlider>
           </div>
           <div className="col">
-            <h3>Tabs Component</h3>
+            <h4>Toggleable /Dynamic Tabs Component</h4>
+            <PillTabs
+              tabtitles={tabtitles}
+              tabcontents={tabcontents}
+            ></PillTabs>
           </div>
         </div>
       </div>
