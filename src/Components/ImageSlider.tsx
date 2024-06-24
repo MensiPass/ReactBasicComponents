@@ -1,8 +1,9 @@
 import React from "react";
-import { useState } from "react";
+interface Props {
+  imgitems: string[];
+}
 
-const ImageSlider = () => {
-  const [dindSel, setIndSel] = useState(false);
+const ImageSlider = ({ imgitems }: Props) => {
   return (
     <div className="container text-center">
       <div className="row">
@@ -25,20 +26,11 @@ const ImageSlider = () => {
               ></button>
             </div>
             <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1667862241971-e1f08f51dd07?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  className="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://images.unsplash.com/photo-1633164442172-dc4147f21954?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  className="d-block w-100"
-                  alt="..."
-                />
-              </div>
+              {imgitems.map((item) => (
+                <div className="carousel-item active">
+                  <img src={item} className="d-block w-100" alt="" />
+                </div>
+              ))}
             </div>
             <button
               className="carousel-control-prev"

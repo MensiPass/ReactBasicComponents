@@ -13,6 +13,10 @@ function App() {
   let accitems = ["Content No. 1", "Content No. 2", "Content No. 3"];
   let drpitems = ["Option No. 1", "Option No. 2", "Option No. 3"];
   let headings = ["Heading No. 1", "Heading No. 2", "Heading No. 3"];
+  let imgitems = [
+    "https://plus.unsplash.com/premium_photo-1667862241971-e1f08f51dd07?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1633164442172-dc4147f21954?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
   const handleSelectItem = (item: string) => {
     console.log(item);
   };
@@ -61,7 +65,7 @@ function App() {
           </div>
           <div className="col mx-auto p-2 text-center">
             <h3>Image Carousel Component</h3>
-            <ImageSlider></ImageSlider>
+            <ImageSlider imgitems={imgitems}></ImageSlider>
           </div>
           <div className="col">
             <h3>Tabs Component</h3>
