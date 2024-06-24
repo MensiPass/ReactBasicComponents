@@ -38,7 +38,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
   const handleClick = (event: MouseEvent) => console.log(event);
   return (
     <Fragment>
-      <h1>{heading}</h1>
+      <h3>{heading}</h3>
 
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
