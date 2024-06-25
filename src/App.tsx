@@ -5,6 +5,7 @@ import Accordion from "./Components/Accordion";
 import DropDown from "./Components/DropDown";
 import ImageSlider from "./Components/ImageSlider";
 import PillTabs from "./Components/PillTabs";
+import ToDoList from "./Components/ToDoList";
 import { useState } from "react";
 
 function App() {
@@ -82,6 +83,13 @@ function App() {
               tabcontents={tabcontents}
             ></PillTabs>
           </div>
+        </div>
+        <div className="row">
+          <div className="col  mx-auto p-2 text-center">
+            <ToDoList></ToDoList>
+          </div>
+          <div className="col  mx-auto p-2 text-center"></div>
+          <div className="col  mx-auto p-2 text-center"></div>
         </div>
       </div>
     </>
