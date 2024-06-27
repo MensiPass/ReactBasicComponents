@@ -5,13 +5,15 @@ const ToDoList = () => {
   const [toDoList, setToDoList] = useState([""]);
   const [newTask, setNewTask] = useState("");
   const [newTaskFirstInit, setNewTaskFirstInit] = useState(true);
-  const [completeTask, setCompleteTask] = useState([0]);
+  const [completeTask, setCompleteTask] = useState([-1]);
+  const [firstTask, setFirstTask] = useState(true);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewTask(e.target.value);
   };
 
   const addTask = () => {
     // event.preventDefault();
+
     const newToDoList = [...toDoList, newTask];
     const newarr = newToDoList.filter((e, i) => e !== "");
     setToDoList(newarr);
@@ -25,12 +27,8 @@ const ToDoList = () => {
   };
   const editTask = (index: number) => {
     // event.preventDefault();
-    const newarr = completeTask.filter((e, i) => e !== index);
-    const newTEditList = [...newarr, index];
-    console.log(newTEditList);
-    setCompleteTask(newTEditList);
 
-    console.log(completeTask);
+    setCompleteTask([...completeTask.filter((e, i) => e !== index), index]);
   };
 
   return (
@@ -79,16 +77,16 @@ const ToDoList = () => {
                       <button
                         type="button"
                         onClick={() => editTask(index)}
-                        className="btn btn-primary btn-sm"
+                        className="btn btn-primary btn-sm m-2"
                       >
-                        Complete task
+                        Complete
                       </button>
                       <button
                         type="button"
                         onClick={() => deleteTask(index)}
-                        className="btn btn-primary btn-sm"
+                        className="btn btn-primary btn-sm m-2"
                       >
-                        Delete task
+                        Delete
                       </button>
                     </div>
                   </div>
